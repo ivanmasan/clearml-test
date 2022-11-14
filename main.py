@@ -6,13 +6,8 @@ from sklearn.linear_model import LinearRegression
 def main():
     X = np.random.rand(100, 10)
     y = X[:, 0] * 5 + X[:, 4] * 2 + np.random.rand(100) * 4
-
-    model = LinearRegression()
-    model.fit(X, y)
-
-    y_pred = model.predict(X)
-
-    plt.scatter(y_pred, y)
+    
+    plt.scatter(X[:, 0], y)
     plt.show()
 
 
