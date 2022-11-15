@@ -1,13 +1,9 @@
-defaults:
-  - aaa: q
-
 aaa:
   a:
     a: -10
     b: -50
-
 a:
-  b: 5
+  b: 1
   c: 0
 b:
   a: 5
