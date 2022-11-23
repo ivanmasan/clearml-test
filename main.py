@@ -5,14 +5,14 @@ def main():
     task = Task.current_task()
 
     config_file_yaml = task.connect_configuration(
-        name="yaml file", configuration='/conf/config.yaml'
+        name="yaml file", configuration='./conf/config.yaml'
     )
 
     with open(config_file_yaml, 'r') as f:
         print(f.readlines())
 
     python_file = task.connect_configuration(
-        name="py file", configuration='/conf/script.py'
+        name="py file", configuration='./conf/script.py'
     )
 
     with open(python_file, 'r') as f:
