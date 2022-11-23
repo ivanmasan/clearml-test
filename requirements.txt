@@ -1,2 +1,4 @@
 hydra-core
 omegaconf
+clearml
+clearml-agent

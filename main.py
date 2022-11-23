@@ -1,9 +1,14 @@
-import hydra
-from omegaconf import DictConfig, OmegaConf
+from clearml import Task
 
-@hydra.main(version_base=None, config_path="conf", config_name="config")
-def main(config):
-    print(OmegaConf.to_yaml(config))
+
+def main():
+    task = Task.current_task()
+
+    config_file_yaml = task.connect_configuration(
+        name="yaml file", configuration='/conf/config.yaml'
+    )
+
+    print(config_file_yaml)
 
 
 if __name__ == "__main__":
