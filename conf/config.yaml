@@ -1,14 +1,14 @@
-defaults:
-  - aaa: q
-
-aaa:
-  a:
-    a: -10
-    b: -50
-
-a:
-  b: 5
-  c: 0
-b:
-  a: 5
-  b: 80
+_BASE_: ../models/default_2105.yaml
+DATALOADER:
+  FILTER_EMPTY_ANNOTATIONS: true
+INPUT:
+  MIN_SIZE_TEST: 800
+MODEL:
+  WEIGHTS: output/training/weights/R50_pointrend.pkl
+TEST:
+  EVAL_PERIOD: 2000
+SOLVER:
+  BASE_LR: 0.002
+  STEPS: (40000, 80000)
+  CHECKPOINT_PERIOD: 20000
+  MAX_ITER: 90000
